@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fredd's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="pexels-zch-12722063 (1080p).mp4" type="video/mp4">
+
+        </video>
+
+        <nav>
+            <img src="Master.png" class="logo">
+            <ul>
+                <li><a href="https://www.roblox.com/groups/9029650/DEATHSYNC-The-Backrooms#!/about">DEATHMASTERS</a></li>
+                <li><a href="https://www.roblox.com/users/1276766648/profile">SITE DEV</a></li>
+                <li><a href="https://discord.gg/nAGuUUkR">DISCORD</a></li>
+                <li><a href="https://discord.com/terms/">DISCORD TOS</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>DEATHMASTERS</h1>
+            <a href="https://www.roblox.com/users/1585645994/profile">Fredd_DeathMaster</a>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          document.addEventListener("mousemove", function(event) {
+            createTrail(event.clientX, event.clientY);
+          });
+    
+          function createTrail(x, y) {
+            const trail = document.createElement("div");
+            trail.className = "trail";
+            trail.style.left = x + "px";
+            trail.style.top = y + "px";
+            document.body.appendChild(trail);
+    
+            // Remove the trail element after a short delay
+            setTimeout(() => {
+              document.body.removeChild(trail);
+            }, 600);
+
+          }
+        });
+      </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+            const numberOfSnowflakes = 50;
+            const container = document.body;
+
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                createSnowflake();
+            }
+
+            function createSnowflake() {
+                const snowflake = document.createElement("div");
+                snowflake.className = "snowflake";
+                snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+                snowflake.style.animationDuration = `${Math.random() * 2 + 1}s`;
+                container.appendChild(snowflake);
+
+                setTimeout(() => {
+                    snowflake.remove();
+                    createSnowflake();
+                }, 10000);
+            }
+        });
+</script>
+</body>
+</html>
